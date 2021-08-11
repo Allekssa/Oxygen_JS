@@ -20,18 +20,20 @@ function myScript() {
 function login() {
     let user = prompt("Кто пришел?", "");
 
-    if (user == "Admin") {
+    if (user === "Admin") {
         let pass = prompt("Пароль?", "");
-        if (pass == 'Черный властелин') {
+        console.log(pass)
+        if (pass === 'Черный властелин') {
             alert('Добро пожаловать!');
-        } else if (pass == '' || null) {
+        } else if (pass === '' || pass === null) {
             alert( 'Вход отменен' );
         } else {
             alert( 'Пароль неверен' );
         }
-    } else if (user == '' || null) {
+    } else if (user === '' || user === null) {
         alert('Вход отменен');
     } else {
         alert('Я вас не знаю')
     }
+    console.log(user)
 }
