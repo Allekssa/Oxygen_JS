@@ -37,3 +37,25 @@ function login() {
     }
     console.log(user)
 }
+//function buttonCycle() {
+ //   for (var i = 0; i < 3; i++) {
+   //     alert("номер" + i + "!");
+  //  }
+    function buttonCycle() {
+    let i = 0;
+    while (i < 3) {
+        alert("номер" + i + "!");
+        i++;
+}
+}
+function buttonNumber() {
+    let value = prompt("Введите число больше 100 ");
+    while (value => 100) {
+        if (value < 100) {
+            value = prompt("Введите число больше 100 ");
+        } else {
+            alert (value);
+        }
+        if (!value) break;
+    }
+}
