@@ -50,7 +50,7 @@ function login() {
 }
 function buttonNumber() {
     let value = prompt("Введите число больше 100 ");
-    while (value => 100) {
+    while (value >= 100) {
         if (value < 100) {
             value = prompt("Введите число больше 100 ");
         } else {
