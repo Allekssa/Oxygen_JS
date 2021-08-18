@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -14,5 +14,14 @@
 <button onclick="login()">Кнопка3</button>
 <button onclick="buttonCycle()">Кнопка4</button>
 <button onclick="buttonNumber()">Кнопка5</button>
+<input type="button" id="hider" value="Нажмите, чтобы спрятать текст" onclick="alert('Клик!')">
+<div id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
+<button onclick="this.style.display='none'"/>кнопка6</button>
+<script>
+    document.getElementById('hider').onclick=function () {
+        document.getElementById('text').hidden=true;
+        console.log('text');
+   }
+</script>
 </body>
 </html>
