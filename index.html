@@ -19,7 +19,7 @@
 <input type="button" id="hider" value="Нажмите, чтобы спрятать текст">
 <div id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
 
-<button id="hideself"/>кнопка6</button>
+<button id="hideself">кнопка6</button>
 
 <script>
     $ (function() {
@@ -28,10 +28,12 @@
         console.log('text');
     });
     });
-    
-    $ (function () {
-       $('#hideself').slideToggle(3000);
-    })
+
+    $ (function(){
+        $('#hideself').click(function(){
+            $(this).slideToggle(3000);
+        });
+    });
 
  //   document.getElementById('hider').onclick=function () {
  //       document.getElementById('text').hidden=true;
