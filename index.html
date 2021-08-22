@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
@@ -14,14 +15,28 @@
 <button onclick="login()">Кнопка3</button>
 <button onclick="buttonCycle()">Кнопка4</button>
 <button onclick="buttonNumber()">Кнопка5</button>
-<input type="button" id="hider" value="Нажмите, чтобы спрятать текст" onclick="alert('Клик!')">
+
+<input type="button" id="hider" value="Нажмите, чтобы спрятать текст">
 <div id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</div>
-<button onclick="this.style.display='none'"/>кнопка6</button>
+
+<button id="hideself"/>кнопка6</button>
+
 <script>
-    document.getElementById('hider').onclick=function () {
-        document.getElementById('text').hidden=true;
+    $ (function() {
+    $('#hider'). click(function () {
+        $('#text'). hide();
         console.log('text');
-   }
+    });
+    });
+    
+    $ (function () {
+       $('#hideself').slideToggle(3000);
+    })
+
+ //   document.getElementById('hider').onclick=function () {
+ //       document.getElementById('text').hidden=true;
+ //       console.log('text');
+ //  }
 </script>
 </body>
 </html>
